@@ -1,3 +1,6 @@
-import { add } from './calc';
+import {
+  convertNumToRoman,
+  convertRomanToNum,
+} from "./roman-numeral-converter";
 
-console.log(`2 plus 2 is ${add(2, 2)}`);
+console.log(`roman < -- >  numeral conversion`);
