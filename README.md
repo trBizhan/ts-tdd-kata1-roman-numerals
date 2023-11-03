@@ -28,3 +28,9 @@ by taking the last character value and subtracting the value
 of the character that comes just before it.
 In the case of XC you subtract the value of X from the value of C.
 X is 10 and C is 100, so 100-10 = 90.
+
+The key guide is that pivotal roman values listed below are used
+in conversion algorithm.
+
+M: 1000, CM: 900, D: 500, CD: 400, C: 100, XC: 90, L: 50,
+XL: 40, X: 10, IX: 9, V: 5, IV: 4, I: 1,
