@@ -34,3 +34,45 @@ in conversion algorithm.
 
 M: 1000, CM: 900, D: 500, CD: 400, C: 100, XC: 90, L: 50,
 XL: 40, X: 10, IX: 9, V: 5, IV: 4, I: 1,
+
+## pseudocode plus algorithm guide
+
+roman numerals pivotal numbers
+
+M: 1000, CM: 900, D: 500, CD: 400, C: 100, XC: 90, L: 50, XL: 40, X: 10, IX: 9, V: 5, IV: 4, I: 1
+
+convert a decimal number to roman number
+
+roman numbers are just added, refer to additive notation
+
+1 = I 2 = II 3 = III
+number format change after III, the next pivotal number is V = 5 so to obtain 4 we
+need to subtract 1 from 5. that is represented as 1 + next number after 4 ---> I + V  
+hence IV = 4
+
+lets take a look at 9:
+
+next number is 10 which is X
+10 - 1 = 9 so I + X = IX = 9
+
+this algorithm is repeated around the pivotal entries.
+
+converNumToRoman:
+
+    loop pivotal numbers:
+    	until the input number >=  key:value listed above
+    	pick roman key to add to result as string
+    	subtract the input by value of key (i.e. roman string)
+    	continue with the loop
+
+    completion of loop is the generated roman numeral
+
+convertRomanToNum:
+
+    loop pivotal numbers:
+    	until the key entry in the pivotal object fits start of input roman number
+    	take the value of selected key:value and start adding to the final result
+    	remove the substring that matched from roman input, hence a new roman input
+    	repeat loop until string length of updated roman number becomes 0
+
+    completion of loop is the generated decimal form roman input.
